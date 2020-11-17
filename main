@@ -1,0 +1,68 @@
+# Программа позволяет определить количество воды, необходимое для полива культуры, в зависимости от погодных условий.
+
+print('Выберите культуру(введите цифру варианта):')
+print('1) Смородина, яблоня, малина',
+      '2) Петрушка, укроп, рукула',
+      '3) Помидоры',
+      '4) Цветы',
+      '5) Огурцы',
+      '6) Кабачок',
+      '7) Клубника', sep='\n')
+culture=int(input())
+
+print('Выберите погодные условия (введите цифру варианта):')
+print('1) Не было дождя',
+      '2) Шёл небольшой дождь (до 3 часов)',
+      '3) Шёл дождь около 6 часов',
+      '4) Шёл дождь около 12 часов',
+      '5) Дождь шёл весь день', sep='\n')
+weather=int(input())
+
+if weather==1:
+      if culture==1:
+            print('30 литров')
+      elif culture == 2:
+            print('5 литров')
+      elif culture == 3:
+            print('10 литров')
+      elif culture == 4:
+            print('3 литра')
+      elif culture == 5:
+            print('20 литров')
+      elif culture == 6:
+            print('15 литров')
+      else:
+            print('7 литров')
+elif weather==2:
+      if culture==1:
+            print('25 литров')
+      elif culture == 2 or culture == 4:
+            print('1 литр')
+      elif culture == 3:
+            print('7 литров')
+      elif culture == 5:
+            print('15 литров')
+      elif culture == 6:
+            print('10 литров')
+      else:
+            print('5 литров')
+elif weather==3:
+      if culture==1:
+            print('20 литров')
+      elif culture == 3 or culture == 6:
+            print('5 литров')
+      elif culture == 5:
+            print('10 литров')
+      else:
+            print('Поливать не нужно')
+elif weather==4:
+      if culture==1:
+            print('20 литров')
+      elif culture == 3:
+            print('5 литров')
+      elif culture == 5:
+            print('10 литров')
+      else:
+            print('Поливать не нужно')
+else:
+      print('Поливать не нужно')
